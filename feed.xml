@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-25T02:15:44-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mobile Internet Course Website</title><subtitle>This course provides an introduction to wireless networking, including fundamental principles, architectures, and techniques.</subtitle><entry><title type="html">Acemap数据库信息</title><link href="http://localhost:4000/jekyll/update/2020/03/25/Acemap%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%A1%E6%81%AF.html" rel="alternate" type="text/html" title="Acemap数据库信息" /><published>2020-03-25T00:39:26-07:00</published><updated>2020-03-25T00:39:26-07:00</updated><id>http://localhost:4000/jekyll/update/2020/03/25/Acemap%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%A1%E6%81%AF</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/03/25/Acemap%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%A1%E6%81%AF.html">&lt;h1 id=&quot;acemap数据库信息&quot;&gt;Acemap数据库信息&lt;/h1&gt;
+
+&lt;h2 id=&quot;数据库整体介绍&quot;&gt;数据库整体介绍&lt;/h2&gt;
+
+&lt;p&gt;实验室数据库主要分为两种，一种是mysql数据库，这个数据库是主数据库，数据最新且内容最全。另外一种是knowledge数据库，这个数据库中主要存储KG组内实现相关功能所需的知识图谱数据。在绝大部分情况下，更加推荐使用mysql数据库。&lt;/p&gt;
+
+&lt;h1 id=&quot;mysql数据库&quot;&gt;MySQL数据库&lt;/h1&gt;
+
+&lt;h2 id=&quot;连接信息&quot;&gt;连接信息&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;host: 202.120.36.29&lt;/li&gt;
+  &lt;li&gt;port: 13307&lt;/li&gt;
+  &lt;li&gt;username: mobilenet&lt;/li&gt;
+  &lt;li&gt;password: mobilenet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note: 该账号为只读权限账号，如果有必须修改数据库的需要，请联系贾雨葶询问拥有更高权限的账号的信息。&lt;/p&gt;
+
+&lt;h2 id=&quot;连接方式&quot;&gt;连接方式&lt;/h2&gt;
+
+&lt;h3 id=&quot;通过数据库连接软件进行连接&quot;&gt;通过数据库连接软件进行连接&lt;/h3&gt;
+
+&lt;p&gt;此时选择较多，如mysql workbench，navicat等，各个软件大同小异，找到自己喜欢的就行。&lt;/p&gt;
+
+&lt;h3 id=&quot;通过代码连接&quot;&gt;通过代码连接&lt;/h3&gt;
+
+&lt;p&gt;python、java、c++等语言均有mysql连接库，以python为例，我个人推荐pymysql这个库，python2与python3都可以用，&lt;a href=&quot;http://www.runoob.com/python3/python3-mysql.html&quot;&gt;使用教程&lt;/a&gt;，或者性能更高的MySQLdb，不过由于MySQLdb底层由C实现，虽然性能更高，但是在配置和使用中没有pymysql易用。同学们可根据自己情况和喜好自行选择。&lt;/p&gt;
+
+&lt;h2 id=&quot;mysql语法&quot;&gt;MySQL语法&lt;/h2&gt;
+
+&lt;p&gt;这方面网上教程很多，可以参考这个&lt;a href=&quot;http://www.runoob.com/mysql/mysql-tutorial.html&quot;&gt;教程&lt;/a&gt;，当然也可以自行找一些博客，或者看mysql官方关于每种语法的解释与说明。&lt;/p&gt;
+
+&lt;h2 id=&quot;数据库结构&quot;&gt;数据库结构&lt;/h2&gt;
+
+&lt;h3 id=&quot;数据库整体结构&quot;&gt;数据库整体结构&lt;/h3&gt;
+
+&lt;p&gt;Acemap原始数据主要存储于&lt;code class=&quot;highlighter-rouge&quot;&gt;am_paper&lt;/code&gt;这个库中，在使用时也请以该数据库为主。
+组内爬虫爬取到的原始数据存储于分布式mongodb数据库中，如有些小组需要，请联系助教进行确认并询问使用方法。
+其他库中普遍是用于支持网站功能的相关数据，一般情况下不需要管。&lt;/p&gt;
+
+&lt;h3 id=&quot;am_paper&quot;&gt;am_paper&lt;/h3&gt;
+
+&lt;p&gt;该数据库结构主要参考数据库&lt;a href=&quot;https://www.zhihu.com/question/24696366&quot;&gt;第三范式&lt;/a&gt;进行搭建。
+该库中主要包含3类表：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;am_paper/am_author/am_affiliation/am_field/am_conference_series/am_conference_instance/am_journal 等： 这类表存储各种学术实体的相关信息，所有实体ID均不会重复，且每种类型的ID有其对应的取值范围，可在这些标的ID字段备注中查看。&lt;/li&gt;
+  &lt;li&gt;am_paper_author/am_paper_field/am_paper_reference 等：这类表表示的是各类学术实体之间的关系，基本上每个表都会是包含多种类型的学术实体，而且这些实体之间的联系是&lt;code class=&quot;highlighter-rouge&quot;&gt;多对多&lt;/code&gt;的关系。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;知识图谱kg数据库&quot;&gt;知识图谱(KG)数据库&lt;/h1&gt;
+
+&lt;h2 id=&quot;下载已经导出好的acekg数据集&quot;&gt;下载已经导出好的aceKG数据集&lt;/h2&gt;
+
+&lt;p&gt;schema信息与下载链接请参考这个&lt;a href=&quot;https://archive.acemap.info/acekg&quot;&gt;链接&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;使用组内搭建好的jena数据库&quot;&gt;使用组内搭建好的jena数据库&lt;/h2&gt;
+
+&lt;p&gt;这个数据库主要是为了支持KG组实现相关的功能与知识图谱挖掘，其中数据不一定齐全或者更新到最新，所以一般情况下不推荐使用该数据库。
+如果有相关的知识图谱方面的工作一定要使用，请联系助教进行确认并询问使用方法。&lt;/p&gt;</content><author><name></name></author><summary type="html">Acemap数据库信息</summary></entry><entry><title type="html">Welcome to Mobile Internet!</title><link href="http://localhost:4000/jekyll/update/2020/03/25/welcome-to-mobile-internet.html" rel="alternate" type="text/html" title="Welcome to Mobile Internet!" /><published>2020-03-25T00:39:26-07:00</published><updated>2020-03-25T00:39:26-07:00</updated><id>http://localhost:4000/jekyll/update/2020/03/25/welcome-to-mobile-internet</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/03/25/welcome-to-mobile-internet.html">&lt;p&gt;This course provides an introduction to wireless networking, including fundamental principles, architectures, and techniques.&lt;/p&gt;
+
+&lt;h2 id=&quot;course-information&quot;&gt;Course Information&lt;/h2&gt;
+&lt;p&gt;The basic principles of wireless communication are provided and multiple different applications of wireless communication system and mobile networks are introduced, including cellular networks, mobile IP, wireless LAN, satellite systems, ad-hoc networks, sensor networks, wireless PAN, etc.&lt;/p&gt;
+
+&lt;h2 id=&quot;student-work&quot;&gt;Student Work&lt;/h2&gt;
+&lt;p&gt;We collect and sort out all the homework from 2008 to now. Ten years accumulation, ten years precipitation. Many student achievements have been published in internationally renowned journals and conferences. We are committed to the combination of teaching and practice, and always stand in the forefront of the field.&lt;/p&gt;
+
+&lt;h2 id=&quot;school-list&quot;&gt;School List&lt;/h2&gt;
+&lt;p&gt;We combine dozens of well-known universities nationwide and collect world-famous courses to jointly build wireless courses platform. From here, you can find a wider range of curriculum resources, more convenient course management, and more systematic curriculum display.&lt;/p&gt;</content><author><name></name></author><summary type="html">This course provides an introduction to wireless networking, including fundamental principles, architectures, and techniques.</summary></entry></feed>
