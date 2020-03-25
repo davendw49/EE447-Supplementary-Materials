@@ -1,0 +1,58 @@
+# Acemap数据库信息
+
+## 数据库整体介绍
+
+实验室数据库主要分为两种，一种是mysql数据库，这个数据库是主数据库，数据最新且内容最全。另外一种是knowledge数据库，这个数据库中主要存储KG组内实现相关功能所需的知识图谱数据。在绝大部分情况下，更加推荐使用mysql数据库。
+
+# MySQL数据库
+
+## 连接信息
+
++ host: 202.120.36.29
++ port: 13307
++ username: mobilenet
++ password: mobilenet
+
+Note: 该账号为只读权限账号，如果有必须修改数据库的需要，请联系贾雨葶询问拥有更高权限的账号的信息。
+
+## 连接方式
+
+### 通过数据库连接软件进行连接
+
+此时选择较多，如mysql workbench，navicat等，各个软件大同小异，找到自己喜欢的就行。
+
+### 通过代码连接
+
+python、java、c++等语言均有mysql连接库，以python为例，我个人推荐pymysql这个库，python2与python3都可以用，[使用教程](http://www.runoob.com/python3/python3-mysql.html)，或者性能更高的MySQLdb，不过由于MySQLdb底层由C实现，虽然性能更高，但是在配置和使用中没有pymysql易用。同学们可根据自己情况和喜好自行选择。
+
+## MySQL语法
+
+这方面网上教程很多，可以参考这个[教程](http://www.runoob.com/mysql/mysql-tutorial.html)，当然也可以自行找一些博客，或者看mysql官方关于每种语法的解释与说明。
+
+## 数据库结构
+
+### 数据库整体结构
+
+Acemap原始数据主要存储于`am_paper`这个库中，在使用时也请以该数据库为主。
+组内爬虫爬取到的原始数据存储于分布式mongodb数据库中，如有些小组需要，请联系助教进行确认并询问使用方法。
+其他库中普遍是用于支持网站功能的相关数据，一般情况下不需要管。
+
+### am_paper
+
+该数据库结构主要参考数据库[第三范式](https://www.zhihu.com/question/24696366)进行搭建。
+该库中主要包含3类表：
+
++ am_paper/am_author/am_affiliation/am_field/am_conference_series/am_conference_instance/am_journal 等： 这类表存储各种学术实体的相关信息，所有实体ID均不会重复，且每种类型的ID有其对应的取值范围，可在这些标的ID字段备注中查看。
++ am_paper_author/am_paper_field/am_paper_reference 等：这类表表示的是各类学术实体之间的关系，基本上每个表都会是包含多种类型的学术实体，而且这些实体之间的联系是`多对多`的关系。
+
+
+# 知识图谱(KG)数据库
+
+## 下载已经导出好的aceKG数据集
+
+schema信息与下载链接请参考这个[链接](https://archive.acemap.info/acekg)
+
+## 使用组内搭建好的jena数据库
+
+这个数据库主要是为了支持KG组实现相关的功能与知识图谱挖掘，其中数据不一定齐全或者更新到最新，所以一般情况下不推荐使用该数据库。
+如果有相关的知识图谱方面的工作一定要使用，请联系助教进行确认并询问使用方法。
