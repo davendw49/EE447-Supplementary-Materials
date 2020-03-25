@@ -12,7 +12,7 @@
 
  - 在Desktop中进行仓库的克隆，输入[EE447-Supplementary-Materials](https://github.com/davendw49/EE447-Supplementary-Materials)的`git`地址(只有第一次使用的时候需要这一步)
     ![avatar](supplementary/githubdesktop.png)
- - 在对应的文件夹下进行文件操作，即将添加的文件以`markdown`的形式方法到`_posts\`文件目录下，相关格式说明可参照`_posts\`现有的文件，*记住命名是按照YY-MM-DD-FILENAME*空格以`-`代替
+ - 在对应的文件夹下进行文件操作，即将添加的文件以`markdown`的形式方法到`_posts\`文件目录下，相关格式说明可参照`_posts\`现有的文件，*记住命名是按照YY-MM-DD-FILENAME*空格以`-`代替，同时可以打开编辑器进行对以前文件的编辑。
  - 由于各位助教是负责不同的模块，所以冲突的可能性不是很大，如有冲突联系[daven].(mailto:davendw@sjtu.edu.cn)
  - 提交的时候需要注意，最好还是执行`pull`以免发生不必要的冲突事件，提交需注意修改Desktop的`comment`.
     ![avatar](supplementary/commit.png)
@@ -23,7 +23,7 @@
  - `git clone https://github.com/davendw49/EE447-Supplementary-Materials.git`
  - 可能需要输入用户名和密码
  - `cd EE447-Supplementary-Materials`
- - 接下来在对应的文件夹下进行文件操作，即将添加的文件以`markdown`的形式方法到`_posts\`文件目录下，相关格式说明可参照`_posts\`现有的文件，*记住命名是按照YY-MM-DD-FILENAME*空格以`-`代替
+ - 接下来在对应的文件夹下进行文件操作，即将添加的文件以`markdown`的形式方法到`_posts\`文件目录下，相关格式说明可参照`_posts\`现有的文件，*记住命名是按照YY-MM-DD-FILENAME*空格以`-`代替，同时可以打开编辑器进行对以前文件的编辑。
  - `git pull`
  - `git add _posts\YY-MM-DD-FILENAME`
  - `git commit -m "说明一下修改内容"`
