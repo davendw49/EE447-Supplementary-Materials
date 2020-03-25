@@ -22,7 +22,7 @@ title: Mobile Internet Course Website
 email: davendw@sjtu.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
   This course provides an introduction to wireless networking, including fundamental principles, architectures, and techniques.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "https://davendw49.github.io/EE447-Supplementary-Materials/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: davendw
 github_username:  davendw49
