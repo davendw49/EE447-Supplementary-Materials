@@ -17,6 +17,7 @@
  - 提交的时候需要注意，最好还是执行`pull`以免发生不必要的冲突事件，提交需注意修改Desktop的`comment`.
     ![avatar](supplementary/commit.png)
  - 并在最后点击右上角的`push` 
+ - ***特别注意，每次提交修改之前需进行`pull`操作***
 
 ### IF 使用 GIT BASH
     打开命令行，开始操作以下代码，第一个命令只有第一次的时候需要使用
@@ -29,6 +30,7 @@
  - `git commit -m "说明一下修改内容"`
  - `git push`
     如有冲突联系[daven](mailto:davendw@sjtu.edu.cn).
+ - ***特别注意，每次提交修改之前需进行`pull`操作***
 
 ## 课程同学提交规范
 
