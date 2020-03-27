@@ -4,7 +4,10 @@ title: About
 permalink: /about/
 ---
 
-## Welcome to Collaborative Website of Mobile Internet Course - EE447
+# Welcome to Collaborative Website of Mobile Internet Course - EE447
+***[https://github.com/davendw49/EE447-Supplementary-Materials](https://github.com/davendw49/EE447-Supplementary-Materials)***
+
+## AUTHOR:[davendw49](https://github.com/davendw49)
 
 项目的所有人可以通过使用[Github在线编辑器](https://github.com/davendw49/EE447-Supplementary-Materials/edit/master/README.md) 对这个说明文档进行相关的修改。
 
@@ -51,5 +54,5 @@ permalink: /about/
 
 ### YOUNG KING
 `daven:` 
-- ***[davendw49]([davendw49@github.com](https://github.com/davendw49))***
+- ***[davendw49](https://github.com/davendw49)***
 - ***[daven-email](davendw@sjtu.edu.cn)***
