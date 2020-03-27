@@ -7,8 +7,8 @@ categories: sc
 
 ## 疫情项目示范
 
-<video id="video" controls="" preload="none" poster="../supplementary/ncp.png">
-    <source id="mp4" src="../supplementary/ncp.mp4" type="video/mp4">
+<video id="video" controls="" preload="none" poster="../../../supplementary/ncp.png">
+    <source id="mp4" src="../../../supplementary/ncp.mp4" type="video/mp4">
 </video>
 
 ## NCP-Acemap项目相关推送
