@@ -21,7 +21,7 @@ categories: sc
 
 可以说知识图谱涵盖人工智能中的符号主义和连接主义的从古至今的大部分应用。
 
- ![avatar](../../../supplementary/stack.png)
+ ![avatar](../../../../supplementary/stack.png)
 
 ## 知识图谱的前世今生
 
