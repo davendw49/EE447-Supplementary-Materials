@@ -5,6 +5,9 @@ date:   2020-03-27 22:39:26 -0700
 categories: sc
 ---
 
+ - 数据获取详见[数据仓库](https://github.com/davendw49/Acemap-NCP-Data) 的 [README.md](https://github.com/davendw49/Acemap-NCP-Data/blob/master/README.md)
+ - 其他项目资源和数据解释见下文
+
 ## 疫情项目示范
 
 <video id="video" controls="" preload="none" poster="../../../../supplementary/ncp.png">
@@ -19,6 +22,7 @@ categories: sc
 
 ## Acemap疫情数据
 
+    数据库数据
 数据的链接方式请查看Acemap数据库信息的文章，主要用到的数据库是ncp-international
 
  - international_record 世界疫情数据
@@ -30,6 +34,10 @@ categories: sc
  - outsidePeople 境外输入病例的数目
 
 其余的表格大家可以自行理解标题。由于本数据库是每日更新的，所以会存在维护卡顿现象，请大家耐心。
+
+    疫情中患者轨迹数据
+这类数据主要采集自腾讯新闻，具体的数据获取详见[数据仓库](https://github.com/davendw49/Acemap-NCP-Data)的README.md
+
 
 ## 相关独特资源
 
