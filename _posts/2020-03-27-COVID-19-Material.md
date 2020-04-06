@@ -50,3 +50,7 @@ categories: sc
  - [MIDAS 2019 Novel Coronavirus Repository一个认真的数据仓库](https://github.com/midas-network/COVID-19)
  - [丁香园](https://github.com/BlankerL/DXY-COVID-19-Data)
 
+## research material
+- [SIR-containment model](https://github.com/benmaier/COVID19CaseNumberModel)
+- [Exposure indices derived from PlaceIQ movement data](https://github.com/COVIDExposureIndices/COVIDExposureIndices)
+- [Phylodynamic estimation of nCoV incidence and prevalence](https://github.com/blab/ncov-phylodynamics)
